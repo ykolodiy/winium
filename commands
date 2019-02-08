@@ -1,23 +1,31 @@
 package apitests.Tests;
-// all about winium command examples https://github.com/2gis/Winium
+import java.io.IOException;
+// all about winium command examples https://github.com/2gis/Winium  https://github.com/2gis/Winium.Desktop/wiki
 import java.net.MalformedURLException;
 import java.net.URL;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.winium.DesktopOptions;
 import org.openqa.selenium.winium.WiniumDriver;
 
 public class Calculator {
 
-	public static void main(String[] args) throws MalformedURLException, InterruptedException {
-		
-		
+	public static void main(String[] args) throws InterruptedException, IOException {
+
 		// start driver C:\Users\dell\IT\eclipse\jars\tools\Winium.Desktop.Driver.exe
+		
+		//Process process = new ProcessBuilder("C:\\Users\\dell\\IT\\eclipse\\jars\\tools\\Winium.Desktop.Driver.exe").start();
+
+		Process process = Runtime.getRuntime().exec("C:\\Users\\dell\\IT\\eclipse\\jars\\tools\\Winium.Desktop.Driver.exe");
+		
+		
+		
+		Thread.sleep(3000);
 		//locate application
 		DesktopOptions options = new DesktopOptions();
 		options.setApplicationPath("C:\\Windows\\System32\\calc.exe");
 		
 		Thread.sleep(1000);
+		System.out.println("not opened yet");
 		
 		WiniumDriver driver = new WiniumDriver(new URL("http://localhost:9999"),options);
 		
@@ -35,6 +43,13 @@ public class Calculator {
 		
 		
 		System.out.println(result2);
+		
+		process.destroy();
+		
+		
+		// close calculator.. get the name run: tasklist
+		Runtime.getRuntime().exec("TASKKILL /F /IM calculator.exe");
+		
 	}
 
 }
