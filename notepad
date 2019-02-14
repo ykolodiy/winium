@@ -1,0 +1,54 @@
+package apitests.Tests;
+
+import java.io.IOException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.winium.DesktopOptions;
+import org.openqa.selenium.winium.WiniumDriver;
+
+public class Notepad {
+
+	public static void main(String[] args) throws Exception {
+Process process = Runtime.getRuntime().exec("C:\\Users\\dell\\IT\\eclipse\\jars\\tools\\Winium.Desktop.Driver.exe");
+		
+		
+		
+		Thread.sleep(3000);
+		//locate application
+		DesktopOptions options = new DesktopOptions();
+		options.setApplicationPath("C:\\Windows\\System32\\notepad.exe");
+		
+		Thread.sleep(1000);
+		System.out.println("not opened yet");
+		
+		WiniumDriver driver = new WiniumDriver(new URL("http://localhost:9999"),options);
+		
+		// to identify use tools https://github.com/blackrosezy/gui-inspect-tool
+		// lets use UISpy.exe https://github.com/blackrosezy/gui-inspect-tool/blob/master/UISpy.exe  use ctrl + move hover release ctrl
+		Thread.sleep(2000);
+		driver.findElement(By.name("File")).click();
+		
+		driver.findElement(By.name("Save")).click();
+	
+		driver.findElement(By.name("File name:")).clear();
+		
+		driver.findElement(By.name("File name:")).sendKeys("fuck.txt");
+		
+		//"1711,398"
+
+		
+		
+		Thread.sleep(2000);
+	
+		
+		
+		process.destroy();
+		
+		// close calculator.. get the name run: tasklist
+		//Runtime.getRuntime().exec("TASKKILL /F /IM notepad.exe");
+
+	}
+
+}
