@@ -10,7 +10,7 @@ import org.openqa.selenium.winium.WiniumDriver;
 public class Calculator {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
-
+                //get Winium.Desktop.Driver.exe https://github.com/2gis/Winium.Desktop/releases
 		// start driver C:\Users\dell\IT\eclipse\jars\tools\Winium.Desktop.Driver.exe
 		
 		//Process process = new ProcessBuilder("C:\\Users\\dell\\IT\\eclipse\\jars\\tools\\Winium.Desktop.Driver.exe").start();
