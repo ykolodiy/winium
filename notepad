@@ -2,7 +2,7 @@ package apitests.Tests;
 
 import java.io.IOException;
 import java.net.URL;
-
+// get jar https://mvnrepository.com/artifact/com.github.2gis.winium/winium-webdriver/0.1.0-1
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.winium.DesktopOptions;
