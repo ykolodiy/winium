@@ -30,6 +30,9 @@ Process process = Runtime.getRuntime().exec("C:\\Users\\dell\\IT\\eclipse\\jars\
 		// to identify use tools https://github.com/blackrosezy/gui-inspect-tool
 		// lets use UISpy.exe https://github.com/blackrosezy/gui-inspect-tool/blob/master/UISpy.exe  use ctrl + move hover release ctrl
 		Thread.sleep(2000);
+		
+			driver.findElement(By.name("Text Editor")).sendKeys("babagalamaga");
+		
 		driver.findElement(By.name("File")).click();
 		
 		driver.findElement(By.name("Save")).click();
@@ -40,7 +43,7 @@ Process process = Runtime.getRuntime().exec("C:\\Users\\dell\\IT\\eclipse\\jars\
 		
 		//"1711,398"
 
-		
+			driver.findElement(By.name("Save")).click();
 		
 		Thread.sleep(2000);
 	
