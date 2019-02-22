@@ -11,6 +11,8 @@ import org.openqa.selenium.winium.WiniumDriver;
 public class Notepad {
 
 	public static void main(String[] args) throws Exception {
+	
+	// get Winium.Desktop.Driver.exe https://github.com/2gis/Winium.Desktop/releases
 Process process = Runtime.getRuntime().exec("C:\\Users\\dell\\IT\\eclipse\\jars\\tools\\Winium.Desktop.Driver.exe");
 		
 		
